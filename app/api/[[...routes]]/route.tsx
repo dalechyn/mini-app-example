@@ -6,6 +6,8 @@ import { devtools } from 'frog/dev'
 import { handle } from 'frog/next'
 import { serveStatic } from 'frog/serve-static'
 
+const BASE_URL = 'https://mini-app-example-liart.vercel.app'
+
 const app = new Frog({
   assetsPath: '/',
   basePath: '/api',
@@ -55,13 +57,13 @@ app.frame('/', (c) => {
       </div>
     ),
     intents: [
-      <Button.MiniApp href={`${process.env.VERCEL_URL}/api/miniapp`}>Example</Button.MiniApp>,
+      <Button.MiniApp href={`${BASE_URL}/api/miniapp`}>Example</Button.MiniApp>,
     ],
   })
 })
   .composerAction(
     '/miniapp',
-    (c) => c.res({title: 'Mini-App Example',url: `${process.env.VERCEL_URL}/api/miniapp`}),
+    (c) => c.res({title: 'Mini-App Example',url: `${BASE_URL}/api/miniapp`}),
     {
       name: 'Mini-App Example',
       description: 'Mini-App Example',
