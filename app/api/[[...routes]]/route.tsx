@@ -63,7 +63,7 @@ app.frame('/', (c) => {
 })
   .composerAction(
     '/miniapp',
-    (c) => c.res({title: 'Mini-App Example',url: `${BASE_URL}/api/miniapp`}),
+    (c) => c.res({title: 'Mini-App Example',url: `${BASE_URL}/miniapp`}),
     {
       name: 'Mini-App Example',
       description: 'Mini-App Example',
