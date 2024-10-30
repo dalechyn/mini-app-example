@@ -1,3 +1,5 @@
+'use client'
+
 import {contractTransaction, sendTransaction, signTypedData} from 'frog/web'
 // just to get the abi
 import {erc20Abi} from 'viem'
