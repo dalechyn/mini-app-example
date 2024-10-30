@@ -55,10 +55,19 @@ app.frame('/', (c) => {
       </div>
     ),
     intents: [
-      <Button.MiniApp href={`${process.env.VERCEL_URL}/miniapp`}>Example</Button.MiniApp>,
+      <Button.MiniApp href={`${process.env.VERCEL_URL}/api/miniapp`}>Example</Button.MiniApp>,
     ],
   })
 })
+  .composerAction(
+    '/miniapp',
+    (c) => c.res({title: 'Mini-App Example',url: `${process.env.VERCEL_URL}/api/miniapp`}),
+    {
+      name: 'Mini-App Example',
+      description: 'Mini-App Example',
+      imageUrl: '',
+      icon: 'log'
+    })
 
 devtools(app, { serveStatic })
 
