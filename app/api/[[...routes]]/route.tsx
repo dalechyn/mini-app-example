@@ -63,10 +63,10 @@ app.frame('/', (c) => {
 })
   .composerAction(
     '/miniapp',
-    (c) => c.res({title: 'Mini-App Example',url: `${BASE_URL}/miniapp`}),
+    (c) => c.res({title: 'Mini-App',url: `${BASE_URL}/miniapp`}),
     {
-      name: 'Mini-App Example',
-      description: 'Mini-App Example',
+      name: 'Mini-App',
+      description: 'Mini-App',
       imageUrl: '',
       icon: 'log'
     })
