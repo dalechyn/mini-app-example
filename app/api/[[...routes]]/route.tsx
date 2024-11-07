@@ -57,7 +57,11 @@ app
 					</div>
 				</div>
 			),
-			intents: [<Button.MiniApp action="/miniapp">Example</Button.MiniApp>],
+			intents: [
+				<Button.MiniApp action="/miniapp" prompt>
+					Example
+				</Button.MiniApp>,
+			],
 		});
 	})
 	.miniApp(
